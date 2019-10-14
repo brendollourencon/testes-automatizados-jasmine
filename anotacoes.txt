@@ -1,0 +1,57 @@
+Suites (describle)
+Escopo do que está sendo testado.
+
+
+Specs (it)
+Specs são testes que validam uma suite de testes (it)
+Começar a descrição do spec sempre com "Deve".
+
+Verificações (Expectations)
+Verificações servem para validar um resultado de teste
+
+
+Comparações (Matchers)
+Comparações são funções que retornar um valor boleano para ser verificado através de uma Expectations(verificação)
+
+Matchers comuns
+toBe
+toEqual
+toMatch
+toBeDefined
+toBeUndefined
+toBeNull
+toBeTruthy
+toBeFalsy
+toContain
+toBeLessThan
+toBeGreaterThan
+toThrow
+toThrowError
+
+
+Spies
+Sao objetos falsos utilizados quando queremos manipular algum retorno que nao faca parte do teste em si
+
+Principais metodos de spies:
+spyOn = Serve para criar um objeto falso a ser criado nos teste (mock)
+
+toHaveBeenCalled = Serve para informar se um metodo do spy foi executado ao menos uma vez
+toHaveBeenCalledTimes = serve  para verifciar quantas vezes um metodo do spy foi chamado
+toHaveBeenCalledWith = serve para verificar com quais parametros um metodo spy foi chamado
+
+and.callThrough = serve para informar ao spy que o metodo original deve ser executado
+and.returnValue = Serve para informar ao spy o valor de retorno de determinado metodo
+and.returnValues = Serve para informar ao spy quais os vales a serem retornados por chamada
+and.callFake = Serve para definir uma  nova  implementacao para um metodo de um spy
+and.throwError = Serve para informar ao spy que determinado metodo deve lancar um erro ao ser executado.
+
+calls.any = Todo spy possui um atributo calls com informacoes sobre suas chamadas, o call.any serve para indicar o seu metodo do spy foi chamada ao menos uma fez
+calls.count = serve para retornar a quantidade de vezes que um metodo foi chamado
+calls.argsFor = armazena e retorna uma lista array contendo parametros utilizados em cada chamada do metodo de um spy
+calls.allArgs = retorna uma lista com todos os argumentos de todas as chamadas aos metodos de um spy
+calls.all = contém e retorna todas as informacoes de chamadas de um metodo do spy
+calls.mostRecent = retorna os dados da ultima chamada do metodo do spy
+calls.first = retorna os dados da primeira chamada do metodo do spy
+calls.reset = serve para limpar a lista com os dados das chamadas dos metodos de um spy
+createSpy = é uma funcao global js do jasmine, serve para criar um spy do zero
+createSpyObj = é uma funcao global js do jasmine, serve para criar um objeto spy do zero
